@@ -1,1 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MFA–GarDen</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- <meta http-equiv="Content-type" content="text/html;charset=UTF-8"> -->
+    <!-- <link rel="shortcut icon" href="favicon.png"> -->
 
+    <!-- css -->
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index_detail.css">
+    <link rel="stylesheet" href="index_media.css">
+
+    <!-- script: index_ie.js -->
+    <script type="text/javascript" src="index_ie.js"></script>
+
+    <!-- script: Masonry -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+    <!--  This is for Are.na routing  -->
+    <script src="//unpkg.com/navigo"></script>
+
+    <!-- script: P5js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.sound.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Menu ================================================================== -->
+    <div class="menu-bg"></div>
+
+    <div class="menu-top-left">
+      <button class="menu-index font-menu" onclick="location.href='index.html'" type="button">
+        GD.MFA
+      </button>
+      <button id="row5" class="menu-btn font-menu" onclick="menuSyllabus()" type="button">
+        Syllabus
+      </button>
+      <button id="row4" class="menu-btn font-menu" type="button">
+        🄋
+      </button>
+      <button id="row1" class="menu-btn font-menu" onclick="menuProjects()" type="button">
+        ➊
+      </button>
+      <button id="row2" class="menu-btn font-menu" type="button">
+        ➋
+      </button>
+      <button id="row3" class="menu-btn font-menu" type="button">
+        ❸
+      </button>
+      <button class="menu-btn blank font-menu" onclick="javascript:window.open('https://docs.google.com/document/d/1XQY0ZEZ5L3OsP8QFk3qE41VTTW5g4ZN4FWAJlf_hELc/edit?usp=sharing', '_blank');" type="button">
+        Sign-up
+      </button>
+      <button class="menu-btn blank font-menu" onclick="javascript:window.open('https://calendly.com/lee-halim/30min', '_blank');" type="button">
+        Office Hours
+      </button>
+      <button class="menu-btn blank font-menu" onclick="javascript:window.open('https://3.basecamp.com/4519873/projects/42107943', '_blank');" type="button">
+        Basecamp
+      </button>
+      <button class="menu-btn blank font-menu" onclick="javascript:window.open('https://drive.google.com/drive/folders/1GanWVysDSDrb9ZaeNH8TqRdDfmJPC9Hf?usp=drive_link', '_blank');" type="button">
+        G-Drive
+      </button>
+      <button class="menu-btn blank font-menu" onclick="javascript:window.open('https://www.are.na/fall-2025-bu-grad-2-gd/bu-grad-2-gd-collaborative-archive', '_blank');" type="button">
+        Are.na
+      </button>
+    </div>
+
+
+    <!-- Body: P1 ================================================================== -->
+    <div id="main" class="row1">
+      <div class="scrollContents">
+
+        <div class="col2-text" style="text-indent: 0px;">
+          <!-- --------------------------------------------------------------- -->
+          <div id="p1_magicSpells_1">
+            <iframe class="col-arena-L" src="schedule_w/weekly_p1.html"></iframe>
+          </div>
+          <!-- --------------------------------------------------------------- -->
+          <div id="p1_magicSpells_2">
+            <iframe class="col-arena-R" src="arena/class_note.html"></iframe>
+          </div>
+          <!-- --------------------------------------------------------------- -->
+        </div>
+
+        <div class="p-title">
+          <!-- <a href="https://www.are.na/spring-2024-bu-sophomore-graphic-design/form-making-workshops-typeface" target="_blank">
+            <h1 style="color: white;">FORM MAKING WORKSHOP & TYPEFACE</h1>
+          </a> -->
+
+          <div class="p-title-subM">
+            <div style="text-align: center;">
+              <button id="btn_p1_1" class="p-title-subM-btn" onclick="p1_magicSpells_1()" type="button">
+                Note
+              </button>
+              |
+              <button id="btn_p1_2" class="p-title-subM-btn" onclick="p1_magicSpells_2()" type="button">
+                Resources
+              </button>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Body: P2 ================================================================== -->
+    <div class="row2">
+      <div class="scrollContents">
+        
+        <div class="col2-text" style="text-indent: 0px;">
+          <!-- --------------------------------------------------------------- -->
+          <div id="p2_infiniteFigures_1">
+            <iframe class="col-arena-L" src="schedule_w/weekly_p2.html"></iframe>
+          </div>
+          <!-- --------------------------------------------------------------- -->
+          <div id="p2_infiniteFigures_2">
+            <iframe class="col-arena-R" src="arena/class_note.html"></iframe>
+          </div>
+          <!-- --------------------------------------------------------------- -->
+        </div>
+        
+        <div class="p-title">
+
+          <div class="p-title-subM">
+            <div style="text-align: center;">
+              <button id="btn_p2_1" class="p-title-subM-btn" onclick="p2_infiniteFigures_1()" type="button">
+                Note
+              </button>
+              |
+              <button id="btn_p2_2" class="p-title-subM-btn" onclick="p2_infiniteFigures_2()" type="button">
+                Resources
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Body: P3 ================================================================== -->
+    <div class="row3">
+      <div class="scrollContents">
+        
+        <div class="col2-text" style="text-indent: 0px;">
+          <!-- --------------------------------------------------------------- -->
+          <div id="p3_ghosts_1">
+            <iframe class="col-arena-L" src="schedule_w/weekly_p3.html"></iframe>
+          </div>
+          <!-- --------------------------------------------------------------- -->
+          <div id="p3_ghosts_2">
+            <iframe class="col-arena-R" src="arena/class_note.html"></iframe>
+          </div>
+        </div>
+
+        <div class="p-title">
+  
+          <div class="p-title-subM">
+            <div style="text-align: center;">
+              <button id="btn_p3_1" class="p-title-subM-btn" onclick="p3_ghosts_1()" type="button">
+                Note
+              </button>
+              |
+              <button id="btn_p3_2" class="p-title-subM-btn" onclick="p3_ghosts_2()" type="button">
+                Resources
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Body: P4 ================================================================== -->
+    <div class="row4">
+      <div class="scrollContents">
+        
+        <div class="col2-text" style="text-indent: 0px;">
+          <!-- --------------------------------------------------------------- -->
+          <div id="p4_terra_1">
+            <iframe class="col-arena-L" src="schedule_w/weekly.html"></iframe>
+          </div>
+          <!-- --------------------------------------------------------------- -->
+          <div id="p4_terra_2">
+            <iframe class="col-arena-R" src="arena/class_resource.html"></iframe>
+          </div>
+          <!-- --------------------------------------------------------------- -->
+        </div>
+        
+        <div class="p-title">
+          
+          <div class="p-title-subM">
+            <div style="text-align: center;">
+              <button id="btn_p4_1" class="p-title-subM-btn" onclick="p4_terra_1()" type="button">
+                Note
+              </button>
+              |
+              <button id="btn_p4_2" class="p-title-subM-btn" onclick="p4_terra_2()" type="button">
+                Resources
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- Body: Syllabus ================================================================== -->
+    <div class="row5">
+      <div class="scrollContents">
+        <div class="col2-full" style="text-indent: 0px;">
+          <div id="syllabus_1">
+            <div class="h-top"></div>
+        
+            <div class="col2">
+              <h3 style="text-indent: 0px;">
+                <div>
+                  <h3>
+                    BU Fall 2025
+                  </h3>
+                  <h3>
+                    Graduate Graphic Design 2
+                  </h3>
+                </div>
+              </h3>
+              <h3 style="text-indent: 0px;">
+                <div>
+                  <h3>
+                    CFA AR 883
+                  </h3>
+                  <h3>
+                    CREDIT 4<br>
+                    Location: Room 409 (808 Commonwealth Ave)
+                  </h3>
+                </div>
+              </h3>
+            </div>
+
+            <br>
+
+            <div class="col2">
+              <h3 style="text-indent: 0px;">
+                <div>
+                  <h3 style="display: grid; grid-template-columns: 125px auto;">
+                    <ul>
+                      <li>
+                        Instructor
+                      </li>
+                    </ul>
+                    <ul>
+                      <li>
+                        <ul class="bulletS">
+                          <li class="link"><a href = "https://leehalim.com" target="_blank">Halim Lee (She/ Her)</a></li>
+                          <li class="link"><a href = "mailto: halim@bu.edu">halim@bu.edu</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </h3>
+                  <br>
+                  <h3 style="display: grid; grid-template-columns: 140px auto;">
+                    <ul>
+                      <li>
+                        Office Hours
+                      </li>
+                    </ul>
+                    <ul>
+                      <li>
+                        Thu 6:20 — 8:20 pm
+                      </li>
+                    </ul>
+                  </h3>
+                </div>
+              </h3>
+
+              <h3 style="text-indent: 0px;">
+                <div>
+                  <h3 style="display: grid; grid-template-columns: 45px auto;">
+                    <ul>
+                      <li>
+                        A1 |
+                      </li>
+                      <br>
+                    </ul>
+                    <ul>
+                      <li>
+                        Tue 12:30 — 3:15 PM<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3:30 — 6:15 PM
+                      </li>
+                      <br>
+                    </ul>
+                  </h3>
+                  <h3 style="display: grid; grid-template-columns: 45px auto;">
+                    <ul>
+                      <li>
+                        B1 |
+                      </li>
+                      <br>
+                    </ul>
+                    <ul>
+                      <li>
+                        Thu 12:30 — 3:15 PM<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3:30 — 6:15 PM
+                      </li>
+                      <br>
+                    </ul>
+                  </h3>
+                </div>
+                <br>
+                <div>
+                </div>
+              </h3>
+            </div>
+            <br>
+
+            <div class="col2" style="text-indent: 0px;">
+              <div>
+                <h3>Description</h3>
+                <h4>
+                  Group collaboration and design as an agent for social change are areas that will challenge students to develop their own content, point of view and to learn their audience. Students will work in teams representing a professional studio environment. Students will manage multiple work streams through lead and supportive roles. Thesis research will complement group activities throughout the fall. Research will begin in fall semester and serve as a launching point for self-directed study during the final semester.
+                </h4><br><br>
+
+                <h3>Learning Outcomes</h3>
+                <h4><ul class="bullet">
+                  <li>Develop and clearly communicate your unique voice as a graphic designer</li>
+                  <li>Gain proficiency in initiating, developing, and completing self-directed projects</li>
+                  <li>Take on new challenges to expand current design practices</li>
+                  <li>Conduct group research on the design industry to prepare for post-graduation opportunities</li>
+                  <li>Develop group communication & collaboration skills</li>
+                  <li>Experience multiple roles in project management</li>
+                </ul></h4><br>
+
+                <h3>Courseware</h3>
+                <h4>
+                  Please check the class website and Slack regularly. The class website will be used for sign-ups and uploading course materials, while Slack will be used for group communication. We will be using Are.na as the main tool for sharing insightful resources. If you don’t have an Are.na account yet, please sign up in advance.
+                </h4><br><br>
+
+                <h3>Project Submission</h3>
+                <h4>
+                  All projects should be uploaded to the class Google Drive by the date specified in the class schedule. Files uploaded after this date will be rejected for your semester grade. 
+                </h4><br><br>
+
+                <h3>Grading</h3>
+                <h4>
+                  You will receive one-semester grade (A—F) according to the following metric:
+                </h4><br>
+                <h4>
+                  <ul class="bulletG3">
+                    <li>Thesis Research :<br>develop a personal voice and refine ideas, clarity of topics and contents</li>
+                  </ul>
+                  <ul class="bulletG3">
+                    <li>Depth & Breadth :<br>in-depth research, exploration, curiosity, and experimentation</li>
+                  </ul>
+                  <ul class="bulletG3">
+                    <li>Group Collaboration :<br>project management,  clarity in group communication, willingness to support group projects</li>
+                  </ul>
+                  <ul class="bulletG1">
+                    <li>Class Participation & Contribution :<br>actively participate and contribute in class</li>
+                  </ul>
+                </ul></h4><br>
+                <hr><br><br>
+
+                <!-- <h3>​​Course Policies</h3> -->
+                <h3>Disability Statement</h3>
+                <h4>
+                  Students who have self-identified, provided documentation of their disability, and requested reasonable accommodations may be entitled to receive approved modifications in the classroom, appropriate academic adjustments, or auxiliary aids that enable them to participate in and benefit from all educational programs and activities. Please see http://www.bu.edu/disability for more details.  
+                </h4><br><br>
+
+                <h3>Attendance & Absences</h3>
+                <h4>
+                  Please make every effort to arrive punctually. You must attend all the classes. According to the SVA Attendance Policy, unless specific permission for absence is arranged with the instructor of this course, students must attend class to receive credit for the course. Unexcused absences exceeding 1/4 of the total class hours in a given semester are considered excessive in all SVA courses. Tardiness and any unexcused absences will reduce your course grade. Three unexcused absences will reduce your semester grade by one step (e.g. A- to B+). Seven unexcused absences will earn you a failing grade for the course.  
+                </h4><br><br>
+
+                <h3>Wellness and Health</h3>
+                <h4>
+                  Your health and well-being are important for your journey as a professional graphic designer. It is important to work hard and balance that with rest, self-care, and attention to your mental and physical health. I will challenge you in this class through assignments, activities, and discussions. However, the work in this class should not be at the expense of your well-being. If for any reason you are struggling to find balance in your work life and health/wellbeing, please reach out. I am happy to discuss ways in which this class can support you in your learning and growth. You can find more resources provided by BU CFA Mental Health & Wellness Resources.
+                </h4><br><br>
+                <!-- <hr><br><br> -->
+
+              </div>
+
+              <!-- --------------------------------------------------------------- -->
+
+              <div>
+                <h3>#1 Zooming Out</h3>
+                <h4>
+                  We have developed our unique graphic design languages through many projects over the past three years. The precursor of our class is to review your current body of work from a broader perspective. This process, “Zooming Out,” aims to unify your scattered ideas into a single, cohesive concept. By summarizing your work into a 5-minute presentation, you will extract the core elements of your work, setting the stage for your pre-thesis abstract at the end of the semester. Additionally, this process will help you identify areas in need of further development for future projects. These self-initiated questions will provide key insights for our next project, “New Horizons.”
+                </h4><br><br>
+                <hr><br><br>
+
+                <h3>#2 New Horizons</h3>
+                <h4>
+                  “New Horizons” aims to broaden your graphic design territory by exploring new horizons based on your current boundaries identified in “Zooming Out.” Through “Zooming Out,” we discovered more about who you are. What do you view as your limitations, and which areas would you like to explore further? The keywords you selected for the direction you want to explore in the 5-minute presentation will help shape this project's focus. This step, “New Horizons,” includes small exercises and workshops to help you gain fresh insights.
+                </h4><br><br>
+                <hr><br><br>
+
+                <h3>#3 Gardeners’ Map</h3>
+                <h4>
+                  Like gardeners, we each cultivate our own territory. This territory continues to develop not only during university but also after graduation. As we nurture our territory, we encounter various questions, from practical concerns—such as which designers and studios exist in the field we want to work in—to personal curiosities about what our peers are currently most interested in. It can be challenging for one person to find answers to all these questions alone. To address these questions together, we will create a "Gardeners' Map." This project period also includes several weeks of collaborative efforts. During this time, each of you will take on the role of both leader and supporter. Your collaborative projects will be showcased in the senior exhibition, scheduled from November 10th to November 16th.
+                </h4><br><br>
+                <hr><br><br>
+
+                <h3>#4 Terraforming</h3>
+                <h4>
+                  “Terraforming“ is the process of transforming a planet into your unique territory. How has your planet evolved and developed in the time that has passed since the 5-minute presentation at the beginning of the class? This project encourages you to create work that expresses the core elements of your design identity. What is it that you truly want to do as a graphic designer, and why? How can your design extend beyond yourself to benefit the world? Your answers will be written as an abstract and created as a visual representation. While your abstract should be printed in a written format for reviewers, the visual outcome does not necessarily need to include text. The goal of “Terraforming” is to build your distinctive design territory and clearly communicate it to your audience.
+                </h4><br>
+                
+              </div>
+            </div>
+          </div>
+            
+          <div id="syllabus_2">
+            <iframe class="col-arena-R" src="schedule_m/monthly.html"></iframe>
+            <!-- <iframe id="noteText" class="col-arena-R" src="https://g-calendar-24f.glitch.me"></iframe> -->
+          </div>
+        </div>
+
+        <div class="p-title">
+          <div class="p-title-subM">
+            <div style="text-align: center;">
+              <button id="btn_s_1" class="p-title-subM-btn" onclick="s_1()" type="button">
+                Syllabus
+              </button>
+              |
+              <button id="btn_s_2" class="p-title-subM-btn" onclick="s_2()" type="button">
+                Schedule
+              </button>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+
+    <!-- Body: Are.na ================================================================== -->
+    <iframe id="notePen" class="toolsWorld" src="/note/index.html"></iframe>
+
+
+    <!-- script ================================================================== -->
+    <script type="text/javascript" src="index.js"></script>
+
+
+  </body>
+</html>
