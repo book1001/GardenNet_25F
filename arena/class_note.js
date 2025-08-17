@@ -1,7 +1,3 @@
-// let slug = 'class-note';
-// let slug = 'bu-senior-gd-collaborative-archive';
-let slug = 'bu-grad-2-gd-collaborative-archive';
-
 let page = 1; // Initialize the page number
 
 window.onload = function() {

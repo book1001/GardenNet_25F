@@ -1,5 +1,3 @@
-let slug = 'resources-2xettbmydm0';
-
 let page = 1; // Initialize the page number
 
 window.onload = function() {
