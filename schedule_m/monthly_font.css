@@ -152,6 +152,20 @@ ul > li b u {
 }
 
 
+/* Markup: VC Meeting ================================================ */
+
+i u {
+  color: #1DDA59;
+  background: black;
+  font-weight: normal;
+  font-style: normal;
+}
+
+ul > li i u {
+  color: #1DDA59;
+  background: transparent;
+}
+
 /* Markup: List Indent ================================================ */
 
 /* ul {
