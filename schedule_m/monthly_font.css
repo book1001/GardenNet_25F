@@ -27,12 +27,15 @@
   --b-text: black;
   --b-bg: white;
 
-  --p1-text: white;
-  --p1-bg: blue;
+  --bu-text: white;
+  --bu-bg: blue;
+
+  --p1-text: black;
+  --p1-bg: yellow;
   --p2-text: black;
-  --p2-bg: white;
-  --p3-text: white;
-  --p3-bg: #ff00ff;
+  --p2-bg: rgb(0, 255, 0);
+  --p3-text: black;
+  --p3-bg: #00eeff;
   --p4-text: black;
   --p4-bg: white;
   --pn-text: #1DDA59;
@@ -92,13 +95,13 @@ ul > li b {
 /* Markup: #3 Gardeners' Map  ================================================ */
 
 i {
-  color: var(--p3-text);
-  background: var(--p3-bg);
+  color: var(--p2-text);
+  background: var(--p2-bg);
   font-style: normal;
 }
 
 ul > li i {
-  color: var(--p3-bg);
+  color: var(--p2-bg);
   background: transparent;
 }
 
@@ -106,13 +109,13 @@ ul > li i {
 /* Markup: #2 New Horizons ================================================ */
 
 u {
-  color: var(--p2-text);
-  background: var(--p2-bg);
+  color: var(--p3-text);
+  background: var(--p3-bg);
   text-decoration: none;
 }
 
 ul > li u {
-  color: var(--p2-text);
+  color: var(--p3-text);
   /* color: var(--p2-bg); */
   background: transparent;
 }
@@ -137,13 +140,14 @@ ul > li b i {
 /* Markup: No Class ================================================ */
 
 b u {
-  color: var(--pn-text);
+  color: var(--bu-text);
+  background: var(--bu-bg);
   font-weight: normal;
   font-style: normal;
 }
 
 ul > li b u {
-  color: var(--pn-text);
+  color: var(--bu-text);
   background: transparent;
 }
 
