@@ -111,7 +111,9 @@ ul.bullet li.link::before {
   margin-right: 8px;
 }
 
-ul.bulletG3{
+ul.bulletG6,
+ul.bulletG3,
+ul.bulletG1 {
   list-style:none;
   margin-block-start: 0;
   margin-block-end: 0;
@@ -120,6 +122,12 @@ ul.bulletG3{
   padding-inline-start: 0;
   padding-left: 40px;
   padding-bottom: 19px;
+}
+
+ul.bulletG6 li::before {
+  content: '60%';
+  margin-left: -40px;
+  margin-right: 10px;
 }
 
 ul.bulletG3 li::before {
@@ -128,7 +136,16 @@ ul.bulletG3 li::before {
   margin-right: 10px;
 }
 
-ul.bulletG1{
+ul.bulletG1 li::before {
+  content: '10%';
+  margin-left: -40px;
+  margin-right: 10px;
+}
+
+/* ul.bulletV1,
+ul.bulletV2,
+ul.bulletV3,
+ul.bulletV4 {
   list-style:none;
   margin-block-start: 0;
   margin-block-end: 0;
@@ -139,11 +156,29 @@ ul.bulletG1{
   padding-bottom: 19px;
 }
 
-ul.bulletG1 li::before {
-  content: '10%';
+ul.bulletV1 li::before {
+  content: 'Group 1';
   margin-left: -40px;
   margin-right: 10px;
 }
+
+ul.bulletV2 li::before {
+  content: 'Group 2';
+  margin-left: -40px;
+  margin-right: 10px;
+}
+
+ul.bulletV3 li::before {
+  content: 'Group 3';
+  margin-left: -40px;
+  margin-right: 10px;
+}
+
+ul.bulletV4 li::before {
+  content: 'Group 4';
+  margin-left: -40px;
+  margin-right: 10px;
+} */
 
 ul.bulletS{
   font-family: FKGroteskSemiMonoTrial-Regular,sans-serif;
