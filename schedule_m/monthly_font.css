@@ -99,12 +99,20 @@ i {
   background: var(--p2-bg);
   font-style: normal;
 }
-
+  
 ul > li i {
   color: var(--p2-bg);
   background: transparent;
 }
 
+i > b {
+  color: var(--p2-text);
+  background: var(--p2-bg);
+  border-bottom: 1.4px solid black;
+  /* border-bottom: 2px dotted black; */
+  /* text-decoration: underline;
+  text-decoration-style: dotted; */
+}
 
 /* Markup: #2 New Horizons ================================================ */
 

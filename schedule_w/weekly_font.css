@@ -156,6 +156,14 @@ span.p2 {
   background: rgb(0, 255, 0);
 }
 
+span.p2 > u {
+  background: transparent;
+  border-bottom: 1.4px solid black;
+  /* border-bottom: 2px dotted black; */
+  /* text-decoration: underline;
+  text-decoration-style: dotted; */
+}
+
 span.p3 {
   color: black;
   background: #00eeff;  
