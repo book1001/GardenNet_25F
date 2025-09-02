@@ -153,7 +153,8 @@ span.p1 {
 
 span.p2 {
   color: black;
-  background: rgb(0, 255, 0);
+  background: rgb(69 255 252);
+  /* background: rgb(40 255 40); */
 }
 
 span.p2 > u {
@@ -166,7 +167,8 @@ span.p2 > u {
 
 span.p3 {
   color: black;
-  background: #00eeff;  
+  /* background: rgb(69 255 252); */
+  background: rgb(220 208 255);
   /* color: white;
   background: blue; */
 }
