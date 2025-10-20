@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project Manager</title>
+  <style>
+    body { font-family: sans-serif; padding: 40px; }
+    form { display: flex; flex-direction: column; max-width: 500px; gap: 10px; margin-bottom: 30px; }
+    input, textarea { padding: 8px; font-size: 1rem; }
+    button { padding: 10px; background: black; color: white; border: none; cursor: pointer; }
+    #status { margin-top: 10px; }
+    .project-list { display: flex; flex-direction: column; gap: 20px; }
+    .project { border: 1px solid #ccc; padding: 15px; border-radius: 8px; }
+    .project img { max-width: 200px; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Project Manager</h1>
+
+  <!-- 프로젝트 추가 폼 -->
+  <form id="projectForm">
+    <input type="text" name="title" placeholder="Project Title" required />
+    <textarea name="description" placeholder="Project Description" required></textarea>
+    <input type="text" name="image" placeholder="Image URL" />
+    <button type="submit">Add Project</button>
+  </form>
+  <div id="status"></div>
+
+  <!-- 프로젝트 목록 -->
+  <div id="projectList" class="project-list"></div>
+
+  <script>
+    const scriptURL = "https://script.google.com/macros/s/AKfycbzpPlJlkLsH5WUK3DeGDS-FaJPkLoLxPWd08cEDqBD5pXhpBB0gnP2kIPx4zOXNrBSX/exec"; // ← Apps Script Web App URL
+
+    async function fetchProjects(params = "") {
+      try {
+        const url = params ? `${scriptURL}?${params}` : scriptURL;
+        const res = await fetch(url);
+        if(!res.ok) throw new Error("HTTP error " + res.status);
+        const projects = await res.json();
+        displayProjects(projects);
+      } catch(err) {
+        console.error("Error fetching projects:", err);
+        document.getElementById("projectList").textContent = "❌ Failed to load projects.";
+      }
+    }
+
+    function displayProjects(projects) {
+      const container = document.getElementById("projectList");
+      container.innerHTML = "";
+      projects.forEach(p => {
+        const div = document.createElement("div");
+        div.classList.add("project");
+        div.innerHTML = `
+          <h2>${p.title}</h2>
+          <p>${p.description}</p>
+          ${p.image ? `<img src="${p.image}" alt="${p.title}">` : ""}
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    // 프로젝트 추가 폼
+    document.getElementById("projectForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const data = new URLSearchParams({
+        title: form.title.value,
+        description: form.description.value,
+        image: form.image.value
+      }).toString();
+
+      document.getElementById("status").textContent = "Sending...";
+
+      try {
+        console.log("🚀 Sending project:", data);
+        await fetchProjects(data); // GET 방식으로 입력 + 목록 업데이트
+        document.getElementById("status").textContent = "✅ Project added!";
+        form.reset();
+      } catch(err) {
+        console.error("❌ Error sending data:", err);
+        document.getElementById("status").textContent = "❌ Error sending data.";
+      }
+    });
+
+    // 페이지 로드 시 초기 프로젝트 불러오기
+    fetchProjects();
+
+    // 주기적으로 프로젝트 목록 갱신 (10초마다)
+    setInterval(() => fetchProjects(), 10000);
+  </script>
+</body>
+</html>
